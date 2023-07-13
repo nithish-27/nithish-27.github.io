@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../fonts/flaticon39a6.html?2feebfb81866df70bd3509f44ff26996") format("truetype"),
+url("../fonts/flaticon39a6-2.html?2feebfb81866df70bd3509f44ff26996") format("woff"),
+url("../fonts/flaticon39a6-3.html?2feebfb81866df70bd3509f44ff26996") format("woff2"),
+url("../fonts/flaticon39a6-4.html?2feebfb81866df70bd3509f44ff26996#iefix") format("embedded-opentype"),
+url("../fonts/flaticon39a6-5.html?2feebfb81866df70bd3509f44ff26996#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-report:before {
+    content: "\f101";
+}
+.flaticon-email:before {
+    content: "\f102";
+}
+.flaticon-telephone-call:before {
+    content: "\f103";
+}
+.flaticon-writing:before {
+    content: "\f104";
+}
+.flaticon-vision:before {
+    content: "\f105";
+}
+.flaticon-quote:before {
+    content: "\f106";
+}
+.flaticon-status-quo:before {
+    content: "\f107";
+}
+.flaticon-speedometer:before {
+    content: "\f108";
+}
+.flaticon-up-arrow:before {
+    content: "\f109";
+}
+.flaticon-address:before {
+    content: "\f10a";
+}
+.flaticon-address-1:before {
+    content: "\f10b";
+}
+.flaticon-phone-call:before {
+    content: "\f10c";
+}
+.flaticon-phone-call-1:before {
+    content: "\f10d";
+}
+.flaticon-location:before {
+    content: "\f10e";
+}
+.flaticon-satisfaction:before {
+    content: "\f10f";
+}
+.flaticon-draw-check-mark:before {
+    content: "\f110";
+}
+.flaticon-administration:before {
+    content: "\f111";
+}
+.flaticon-developer:before {
+    content: "\f112";
+}
+.flaticon-coding:before {
+    content: "\f113";
+}
+.flaticon-business:before {
+    content: "\f114";
+}
+.flaticon-smartphone:before {
+    content: "\f115";
+}
+.flaticon-world:before {
+    content: "\f116";
+}
+.flaticon-custom:before {
+    content: "\f117";
+}
+.flaticon-writing-1:before {
+    content: "\f118";
+}
