@@ -58,6 +58,23 @@
     .tilted-image-2:hover {
       transform: rotate(-10deg); /* Adjust the degree as per your requirement */
     }
+    .shake-image {
+    
+      transition: transform 0.3s ease;
+      transform: rotate(10deg);
+    }
+
+    .shake-image:hover {
+      animation: shakeAnimation 0.5s;
+    }
+
+    @keyframes shakeAnimation {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px) rotate(-5deg); }
+      50% { transform: translateX(5px) rotate(5deg); }
+      75% { transform: translateX(-5px) rotate(-5deg); }
+      100% { transform: translateX(0); }
+    }
 </style>
     <link
       rel="shortcut icon"
@@ -480,7 +497,7 @@
             data-wow-duration="2000ms"
           >
             <img
-            class="tilted-image-1 "
+            class="shake-image  "
               style="width: 350px;height:230px;border-radius: 20px;"
           
               src="assets/img/banner/banner-1.jpg"
@@ -495,7 +512,7 @@
             data-wow-duration="2000ms"
           >
             <img
-            class="tilted-image-2"
+            class="shake-image "
               style="width: 350px;border-radius: 20px;margin-top: -30px;"
              
               src="assets/img/banner/banner-3.jpg"
