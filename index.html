@@ -27,7 +27,37 @@
 .screenshot:hover {
   transform: translateY(-100%);
 }
+.floating-image {
+      animation: floatAnimation 3s ease-in-out infinite;
+    }
 
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+.tilted-image-1 {
+      transition: transform 0.3s ease;
+      transform: rotate(10deg);
+    }
+
+    .tilted-image-1:hover {
+      transform: rotate(-10deg); /* Adjust the degree as per your requirement */
+    }
+    .tilted-image-2 {
+      transition: transform 0.3s ease;
+      transform: rotate(10deg);
+    }
+
+    .tilted-image-2:hover {
+      transform: rotate(-10deg); /* Adjust the degree as per your requirement */
+    }
 </style>
     <link
       rel="shortcut icon"
@@ -437,20 +467,21 @@
 	============================================= -->
 
     <section
-      style="margin-bottom: -470px"
+     style="height: 450px;"
       id="thx-banner"
       class="thx-banner-section"
     >
-      <div style="margin-bottom: -200px" class="thx-banner-mockup ul-li-block">
+      <div class="thx-banner-mockup ul-li-block">
         <ul class="mockup-img">
           <li
            
             class="wow fadeInRight"
-            data-wow-delay="400ms"
-            data-wow-duration="1500ms"
+            data-wow-delay="500ms"
+            data-wow-duration="2000ms"
           >
             <img
-              style="width: 350px;border-radius: 20px;"
+            class="tilted-image-1 "
+              style="width: 350px;height:230px;border-radius: 20px;"
           
               src="assets/img/banner/banner-1.jpg"
               alt=""
@@ -460,11 +491,12 @@
           <li
             style="margin-top:200px"
             class="wow fadeInLeft"
-            data-wow-delay="800ms"
-            data-wow-duration="1500ms"
+            data-wow-delay="900ms"
+            data-wow-duration="2000ms"
           >
             <img
-              style="width: 350px;border-radius: 20px;"
+            class="tilted-image-2"
+              style="width: 350px;border-radius: 20px;margin-top: -30px;"
              
               src="assets/img/banner/banner-3.jpg"
               alt=""
@@ -503,7 +535,7 @@
           data-wow-delay="800ms"
           data-wow-duration="1500ms"
         >
-          <h1>Welcome</h1>
+          <h1 class="floating-image "style="font-size: 85px;">Welcome</h1>
 
           <span>to my</span>
 
@@ -656,7 +688,9 @@
                  
                   <div class="thx-page-img2 position-absolute">
                     <img style=" width: 200px; 
-                    height: 370px;"src="assets/img/projects/yts (3).jpg" alt="" />
+                    height: 370px;"
+                    
+                    src="assets/img/projects/yts (3).jpg" alt="" />
                   </div>
                 </div>
 
