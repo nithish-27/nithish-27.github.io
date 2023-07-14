@@ -113,7 +113,43 @@
         transform: scaleX(1);
       }
     }
+    .up {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999; /* Higher z-index value */
+    }
 
+    .scrollup {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .scrollup:hover {
+      animation: moveAnimation 2s forwards;
+    }
+
+    @keyframes moveAnimation {
+      0% {
+        transform: translate(-50%, -50%);
+      }
+      50% {
+        transform: translate(10%, 10%);
+      }
+      100% {
+        transform: translate(-50%, -50%);
+      }
+    }
+    
 </style>
     <link
       rel="shortcut icon"
@@ -170,8 +206,8 @@
 
     <!-- preloder end -->
 
-    <div class="up">
-      <a href="#" class="scrollup text-center"
+    <div class="up ">
+      <a href="#" class="scrollup text-center moving-button"
         ><i class="fas fa-chevron-up"></i
       ></a>
     </div>
@@ -618,8 +654,12 @@
     <div class="thx-section-title text-center align-items-center justify-content-center">
       <div style="font-size:50px" class="sub-title stretch-compress-element">About</div><br/>
       <div  style="width: 60vw;" class="container">
-        <p   >Welcome to my portfolio! I am Nithish Kumar, a passionate and dedicated web developer with a strong focus on creating innovative and user-centric solutions. With a blend of technical expertise and a creative mindset, I strive to deliver high-quality projects that leave a lasting impact.</p>
-       <br/> <p ><span style="font: size 20px;font-weight: bold;" class="text-black">Skills:</span>
+        <p   class="wow fadeInUp"
+        data-wow-delay="2000ms"
+        data-wow-duration="1500ms" >Welcome to my portfolio! I am Nithish Kumar, a passionate and dedicated web developer with a strong focus on creating innovative and user-centric solutions. With a blend of technical expertise and a creative mindset, I strive to deliver high-quality projects that leave a lasting impact.</p>
+       <br/> <p  class="wow fadeInUp"
+       data-wow-delay="2000ms"
+       data-wow-duration="1500ms"><span style="font: size 20px;font-weight: bold;" class="text-black">Skills:</span>
           I possess a diverse skill set encompassing web development, Python, Java, and various frameworks and libraries such as Bootstrap, React Native, ReactJS, and NextJS. My proficiency in these technologies enables me to develop robust and visually appealing applications that meet the evolving needs of the digital landscape.</p>
       </div>
    
@@ -758,7 +798,7 @@
       <div class="thx-demo-pages-content">
         <div class="thx-page-item-wrapper filtr-container row">
           <div
-            class="col-lg-4 col-md-6 filtr-item"
+            class="col-lg-4 col-md-6 filtr-item  "
             data-category="1"
             data-sort="Busy streets"
           >
@@ -2258,6 +2298,32 @@
       }
     };
   </script>
+   <!-- <script>
+    var button = document.querySelector('.moving-button');
+
+    button.addEventListener('mouseover', function() {
+      var windowWidth = window.innerWidth;
+      var windowHeight = window.innerHeight;
+
+      var newPositionX = Math.random() * (windowWidth - button.offsetWidth);
+      var newPositionY = Math.random() * (windowHeight - button.offsetHeight);
+
+      button.style.left = newPositionX + 'px';
+      button.style.top = newPositionY + 'px';
+    });
+  </script> -->
+  <script>var button = document.querySelector('.scrollup');
+
+    button.addEventListener('mouseover', function() {
+      var windowWidth = window.innerWidth;
+      var windowHeight = window.innerHeight;
+
+      var newPositionX = Math.random() * (windowWidth - button.offsetWidth);
+      var newPositionY = Math.random() * (windowHeight - button.offsetHeight);
+
+      button.style.left = newPositionX + 'px';
+      button.style.top = newPositionY + 'px';
+    });</script>
   </body>
 
   <!-- Mirrored from themexriver.com/wp/gxbar/demos/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Apr 2023 13:40:56 GMT -->
