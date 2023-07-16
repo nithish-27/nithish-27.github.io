@@ -81,10 +81,7 @@
     }
     .stretch-compress-element {
       transition: transform 0.3s;
-    }
-
-    .stretch-compress-element:hover {
-      animation: stretchCompressAnimation 0.9s;
+      animation: stretchCompressAnimation 3s 2;
     }
 
     @keyframes stretchCompressAnimation {
@@ -580,7 +577,17 @@
             />
           </li>
          
-         
+         <li>
+          <!-- <div class="floating-image">
+            <img
+           
+              style="width: 230px;height:150px;border-radius: 20px;"
+             
+              src="assets/img/bg/portfolio.png"
+              alt=""
+            />
+          </div> -->
+         </li>
           <li
             style="margin-top:200px"
             class="wow fadeInLeft"
@@ -655,11 +662,11 @@
       <div style="font-size:50px" class="sub-title stretch-compress-element">About</div><br/>
       <div  style="width: 60vw;" class="container">
         <p   class="wow fadeInUp"
-        data-wow-delay="2000ms"
+        data-wow-delay="1500ms"
         data-wow-duration="1500ms" >Welcome to my portfolio! I am Nithish Kumar, a passionate and dedicated web developer with a strong focus on creating innovative and user-centric solutions. With a blend of technical expertise and a creative mindset, I strive to deliver high-quality projects that leave a lasting impact.</p>
        <br/> <p  class="wow fadeInUp"
-       data-wow-delay="2000ms"
-       data-wow-duration="1500ms"><span style="font: size 20px;font-weight: bold;" class="text-black">Skills:</span>
+       data-wow-delay="1500ms"
+       data-wow-duration="2000ms"><span style="font: size 20px;font-weight: bold;" class="text-black">Skills:</span>
           I possess a diverse skill set encompassing web development, Python, Java, and various frameworks and libraries such as Bootstrap, React Native, ReactJS, and NextJS. My proficiency in these technologies enables me to develop robust and visually appealing applications that meet the evolving needs of the digital landscape.</p>
       </div>
    
@@ -788,10 +795,10 @@
    -->
     <section id="thx-demo-pages" class="thx-demo-pages-section">
       <div class="container">
-        <div class="thx-section-title text-center headline">
+        <div id="type"class="thx-section-title text-center headline">
           <div class="sub-title">All projects</div>
 
-          <h2 class="typing-effect">9 project details and link</h2>
+          <h2 class="typing-effect-1">Project details and link</h2>
         </div>
       </div>
 
@@ -2297,6 +2304,70 @@
         typeWriter(elements[i]);
       }
     };
+  </script>
+   <script>
+    var element = document.getElementById('about');
+    var hasActivatedEffect = false;
+
+    function isInViewport(element) {
+      var rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function activateEffect() {
+      if (isInViewport(element) && !hasActivatedEffect) {
+        element.querySelector('.stretch-compress-element').classList.add('active');
+        hasActivatedEffect = true;
+      }
+    }
+
+    // Activate the effect when the element is scrolled into view
+    window.addEventListener('scroll', activateEffect);
+    activateEffect(); // Initial check when the page loads
+  </script>
+   <script>
+    var element = document.getElementById('type');
+    var speed = 150; // The speed of typing (in milliseconds)
+    var hasStartedTyping = false;
+
+    function isInViewport(element) {
+      var rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function typeWriter(element) {
+      var text = element.innerHTML;
+      element.innerHTML = '';
+      var index = 0;
+      var intervalId = setInterval(function() {
+        if (index < text.length) {
+          element.innerHTML += text.charAt(index);
+          index++;
+        } else {
+          clearInterval(intervalId);
+        }
+      }, speed);
+    }
+
+    function startTyping() {
+      if (isInViewport(element) && !hasStartedTyping) {
+        typeWriter(element.querySelector('.typing-effect-1'));
+        hasStartedTyping = true;
+      }
+    }
+
+    // Start the typing effect when the element is scrolled into view
+    window.addEventListener('scroll', startTyping);
   </script>
    <!-- <script>
     var button = document.querySelector('.moving-button');
